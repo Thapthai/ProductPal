@@ -2,8 +2,6 @@ const express = require("express");
 const http = require("http");
 const { WebSocketServer } = require("ws");
 const bodyParser = require("body-parser");
-const productRoutes = require("./routes/productRoutes");
-const websocketController = require("./controllers/websocketController");
 
 const app = express();
 const server = http.createServer(app);

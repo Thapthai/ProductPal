@@ -1,22 +1,22 @@
 module.exports = function (sequelize, Sequelize) {
   const { DataTypes } = require("sequelize");
-  const Products = sequelize.define(
-    "products",
+  const OrderItem = sequelize.define(
+    "order_item",
     {
-      name: {
+      order_id: {
         type: DataTypes.STRING,
       },
-      description: {
+      product_id: {
         type: DataTypes.STRING,
+      },
+      quantity: {
+        type: DataTypes.FLOAT,
       },
       price: {
-        type: DataTypes.FLOAT,
+        type: DataTypes.INTEGER,
       },
       status: {
         type: DataTypes.STRING,
-      },
-      category_id: {
-        type: DataTypes.INTEGER,
       },
     },
     {
@@ -24,7 +24,7 @@ module.exports = function (sequelize, Sequelize) {
       updatedAt: "updated_at",
     }
   );
-  Products.sync();
+  OrderItem.sync();
 
-  return Products;
+  return OrderItem;
 };
