@@ -1,7 +1,7 @@
 module.exports = function (sequelize, Sequelize) {
   const { DataTypes } = require("sequelize");
-  const Cart = sequelize.define(
-    "cart",
+  const Carts = sequelize.define(
+    "carts",
     {
       user_id: {
         type: DataTypes.STRING,
@@ -15,7 +15,7 @@ module.exports = function (sequelize, Sequelize) {
       updatedAt: "updated_at",
     }
   );
-  Cart.sync();
+  Carts.sync();
 
-  return Cart;
+  return Carts;
 };
